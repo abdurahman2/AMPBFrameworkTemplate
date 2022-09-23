@@ -33,9 +33,6 @@ public class NavigationBar extends AbstractFragment {
     @FindBy(xpath = "//a[text()='Sign in/Join']")
     private WebElement signInIcon;
 
-    @FindBy(xpath = "//*[@class='user-nav']")
-    private WebElement navBarEl;
-
     public static By getNavigationBarElement() {
         return navigationBarElement;
     }

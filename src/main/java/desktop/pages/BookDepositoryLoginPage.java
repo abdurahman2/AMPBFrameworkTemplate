@@ -26,10 +26,10 @@ public class BookDepositoryLoginPage extends AbstractPage {
     @FindBy(id = "signInSubmit")
     private WebElement signInButton;
 
-    @FindBy(xpath = "//*[@id=\"ap_email_icon\"]")
+    @FindBy(xpath = "//*[@id='ap_email_icon']")
     private WebElement clearEmailButton;
 
-    @FindBy(xpath = "//*[@id=\"ap_password_icon\"]")
+    @FindBy(xpath = "//*[@id='ap_password_icon']")
     private WebElement clearPasswordButton;
 
     @FindBy(xpath = "//*[@class='signin-iframe']")
