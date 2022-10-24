@@ -4,7 +4,7 @@ public final class RegexExpression {
 
     public RegexExpression() {
     }
-    public static final String EMAIL_PATTERN = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
+    public static final String EMAIL_PATTERN = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
     public static final String IPV4_PATTERN = "^(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])(\\.(?!$)|$)){4}$";
     public static final String MASTER_CARD_NUMBER_PATTERN = "^4[0-9]{12}(?:[0-9]{3})?$";
     public static final String BUILD_NUMBER = "^(\\d+)";
