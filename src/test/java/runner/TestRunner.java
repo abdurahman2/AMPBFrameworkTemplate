@@ -1,6 +1,8 @@
 package runner;
 
-import desktop.pages.BookDepositoryLoginPage;
+import com.cucumber.junit.steps.HomePageSteps;
+import desktop.pages.HomePage;
+import desktop.pages.LoginPage;
 import driver.SingletonDriver;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
@@ -16,11 +18,11 @@ import static constants.Constants.*;
 class TestRunner {
 
     static WebDriver driver = SingletonDriver.getWebDriverInstance();
-    BookDepositoryLoginPage bookDepositoryLoginPage = new BookDepositoryLoginPage(driver);
+    LoginPage LoginPage = new LoginPage();
 
     @Test
     void navigateToHomePage() {
-        String url = bookDepositoryLoginPage
+        String url = LoginPage
                 .openBookDepositoryLoginPage()
                 .getNavigationBar()
                 .navigateToHomePage()
@@ -30,7 +32,7 @@ class TestRunner {
 
     @Test
     void navigateToContactUsPage() {
-        String url = bookDepositoryLoginPage
+        String url = LoginPage
                 .openBookDepositoryLoginPage()
                 .getNavigationBar()
                 .navigateToContactUsPage()
@@ -40,7 +42,7 @@ class TestRunner {
 
     @Test
     void navigateToHelpPage() {
-        String url = bookDepositoryLoginPage
+        String url = LoginPage
                 .openBookDepositoryLoginPage()
                 .getNavigationBar()
                 .navigateToHelpPage()
@@ -50,7 +52,7 @@ class TestRunner {
 
     @Test
     void navigateToOrderStatusPage() {
-        String url = bookDepositoryLoginPage
+        String url = LoginPage
                 .openBookDepositoryLoginPage()
                 .getNavigationBar()
                 .navigateToOrderStatusPage()
@@ -60,7 +62,7 @@ class TestRunner {
 
     @Test
     void navigateToWishListPage() {
-        String url = bookDepositoryLoginPage
+        String url = LoginPage
                 .openBookDepositoryLoginPage()
                 .getNavigationBar()
                 .navigateToWishListPage()
@@ -70,7 +72,7 @@ class TestRunner {
 
     @Test
     void navigateToSignInJoinPage() {
-        String url = bookDepositoryLoginPage
+        String url = LoginPage
                 .openBookDepositoryLoginPage()
                 .getNavigationBar()
                 .navigateToSignInJoinPage()
@@ -80,7 +82,7 @@ class TestRunner {
 
     @Test
     void clearEmailButtonIsAppeared() {
-        String style = bookDepositoryLoginPage
+        String style = LoginPage
                 .openBookDepositoryLoginPage()
                 .switchToLogInFrame()
                 .setEmail("3topora@gmail.com")
@@ -90,7 +92,7 @@ class TestRunner {
 
     @Test
     void clearPasswordButtonIsAppeared() {
-        String style = bookDepositoryLoginPage
+        String style = LoginPage
                 .openBookDepositoryLoginPage()
                 .switchToLogInFrame()
                 .setPassword("777")
